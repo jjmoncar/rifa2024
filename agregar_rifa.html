@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Rifa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Crear Nueva Rifa</h2>
+        <form action="php/crear_rifa.php" method="POST">
+            <div class="form-group">
+                <label for="titulo">Título de la rifa:</label>
+                <input type="text" id="titulo" name="titulo" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio por número (USD):</label>
+                <input type="number" step="0.01" id="precio" name="precio" class="form-control" value="1.00" required>
+            </div>
+
+            <div class="form-group">
+                <label for="max_numeros">Número máximo de boletos:</label>
+                <input type="number" id="max_numeros" name="max_numeros" class="form-control" value="100000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de inicio:</label>
+                <input type="datetime-local" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de finalización:</label>
+                <input type="datetime-local" id="fecha_fin" name="fecha_fin" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen_portada">URL de la imagen de portada:</label>
+                <input type="text" id="imagen_portada" name="imagen_portada" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear Rifa</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
